@@ -14,5 +14,7 @@
 
 
 <ion-content padding>
-
+  <ul>
+    <li *ngFor="let contact from allContacts">{{contact.name}}</li>
+  </ul>
 </ion-content>

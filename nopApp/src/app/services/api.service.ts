@@ -12,7 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 @Injectable()
 export class ApiService {
-    path = 'nop/'
+    path = 'https://us-central1-nop-service.cloudfunctions.net/function-1/'
     constructor(private http: Http) { }
 
     listUpdates(id) {

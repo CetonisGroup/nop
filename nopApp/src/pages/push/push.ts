@@ -14,7 +14,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'push.html',
 })
 export class PushPage {
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

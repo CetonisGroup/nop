@@ -11,4 +11,7 @@
   <button ion-button color="secondary" (click)="push()">Push</button>
   <button ion-button color="secondary" (click)="navigate('AddUserPage')">Add new contact</button>
   <button ion-button color="secondary" (click)="navigate('SharePage')">Share</button>
+  <ul *ngFor="let contact of allContacts">
+    <li>{{contact.displayName}}</li>
+  </ul>
 </ion-content>
