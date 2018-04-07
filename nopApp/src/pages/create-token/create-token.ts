@@ -22,4 +22,8 @@ export class CreateTokenPage {
     console.log('ionViewDidLoad CreateTokenPage');
   }
 
+  public createToken() {
+    console.log('create token called');
+  }
+
 }
