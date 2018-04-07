@@ -14,12 +14,15 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'share.html',
 })
 export class SharePage {
-
+  qrData = null;
+  createdCode = null;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SharePage');
   }
-
+  createCode() {
+    this.createdCode = this.qrData;
+  }
 }
