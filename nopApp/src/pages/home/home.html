@@ -1,23 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      NOP - Network of Privacy
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the
-    <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-  <button ion-button color="secondary">Secondary</button>
-
-  <button ion-button color="danger">Danger</button>
-
-  <button ion-button color="light">Light</button>
-
-  <button ion-button color="dark">Dark</button>
-
+  <button ion-button color="secondary" (click)="pull()">Pull</button>
+  <button ion-button color="secondary" (click)="push()">Push</button>
+  <button ion-button color="secondary" (click)="navigate('AddUserPage')">Add new contact</button>
+  <button ion-button color="secondary" (click)="navigate('SharePage')">Share</button>
 </ion-content>
