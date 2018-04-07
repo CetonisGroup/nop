@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { Contacts } from '@ionic-native/contacts';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { PrivacyTokenService } from './services/privacy-token.service';
 
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
@@ -26,6 +27,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     HomePage
   ],
   providers: [
+    PrivacyTokenService,
     StatusBar,
     Contacts,
     SplashScreen,
