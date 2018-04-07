@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PrivacyTokenService } from '../../app/services/privacy-token.service';
 
 /**
  * Generated class for the CreateTokenPage page.
@@ -15,15 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CreateTokenPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private privacyTokenService: PrivacyTokenService) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreateTokenPage');
   }
 
-  public createToken() {
-    console.log('create token called');
-  }
+  public async createToken() {
+    await this.privacyTokenService.createPrivacyToken();
+    const key = await this.privacyTokenService.getPrivacyToken();
+    console.log(key);
 
+  }
 }

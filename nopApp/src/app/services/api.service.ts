@@ -1,4 +1,4 @@
-import {
+/**import {
     Injectable,
     ComponentFactoryResolver,
     Component,
@@ -22,4 +22,4 @@ export class ApiService {
         this.nopApi = this.protoDescriptor.nop;
         this.client = new this.nopApi.NopService()
     }
-}
+}**/
