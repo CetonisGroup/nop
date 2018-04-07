@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package nop;
+
+import "google/protobuf/empty.proto";
+
+service NopService {
+    rpc ListUpdates(ListUpdateRequest) returns (stream Update);
+    rpc CreateUpdate(Update) returns (google.protobuf.Empty);
+}
+
+message Update {
+    string user_id = 1;
+    bytes encrypted_payload = 2;
+}
+
+message ListUpdateRequest {
+    string user_id = 1;
+}
+
+message DecryptedUpdateMessage {
+    string name = 20;
+    string first_name = 22;
+    repeated PhoneNumber phone_numbers = 21;
+    Address address = 23;
+}
+
+message PhoneNumber {
+    string type = 1;
+    string number = 2;
+}
+
+message Address {
+    string street = 1;
+    string city = 2;
+    string postal_code = 3;
+    string country = 4;
+}
